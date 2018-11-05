@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>화상수업 <%= title %></title>
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+    <script src="/js/lib/inherit.js"></script>
+    <script src="/js/lib/jquery.js"></script>
+    <script src="/js/lib/eventemitter.js"></script>
+    <script src="/js/lib/DetectRTC.js"></script>
+    <script src="/js/utils.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="/" title="화상수업">
+          <% if (title) { %> 《 <% } %>화상수업
+        </a>
+        <%= title %>
+      </h1>
+
+    </header>

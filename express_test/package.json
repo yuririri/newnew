@@ -1,0 +1,24 @@
+{
+  "name": "webrtc-lab",
+  "description": "WebRTC simple examples",
+  "version": "0.9.1",
+  "author": "dodortus",
+  "license": "MIT",
+  "keywords": [
+    "webrtc",
+    "javascript"
+  ],
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "socket.io": "^2.1.1",
+    "websocket": "^1.0.28"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  },
+  "scripts": {
+    "start": "node ./backend/server.js",
+    "nodemon": "nodemon ./backend/server.js"
+  }
+}
