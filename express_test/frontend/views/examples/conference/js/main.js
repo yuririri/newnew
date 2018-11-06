@@ -1,9 +1,4 @@
-/*!
- *
- * WebRTC Lab
- * @author dodortus (dodortus@gmail.com / codejs.co.kr)
- *
- */
+
 $(function() {
   console.log('Loaded Main');
 
@@ -50,8 +45,8 @@ $(function() {
 
     $waitWrap.html([
       '<div class="room-info">',
-        '<p>당신을 기다리고 있어요. 참여 하실래요?</p>',
-        '<button id="btn-join">Join</button>',
+        '<p>상대가 접속중입니다. 참여하시겠습니까?</p>',
+        '<button id="btn-join">참여하기</button>',
       '</div>'
     ].join('\n'));
 
@@ -217,13 +212,29 @@ $(function() {
     $('#btn-camera').click(function() {
       const $this = $(this);
       $this.toggleClass('active');
-      mediaHandler[$this.hasClass('active') ? 'pauseVideo' : 'resumeVideo']();
+      if($this.hasClass('active')) {
+    	  mediaHandler['pauseVideo']();
+    	  $this.html('카메라 ON');
+      }
+      else {
+    	  mediaHandler['resumeVideo']();
+    	  $this.html('카메라 OFF');
+      }
+      //mediaHandler[$this.hasClass('active') ? 'pauseVideo' : 'resumeVideo']();
     });
 
     $('#btn-mic').click(function() {
       const $this = $(this);
       $this.toggleClass('active');
-      mediaHandler[$this.hasClass('active') ? 'muteAudio' : 'unmuteAudio']();
+      if($this.hasClass('active')) {
+    	  mediaHandler['muteAudio']();
+    	  $this.html('마이크 ON');
+      }
+      else {
+    	  mediaHandler['unmuteAudio']();
+    	  $this.html('마이크 OFF');
+      }
+      //mediaHandler[$this.hasClass('active') ? 'muteAudio' : 'unmuteAudio']();
     });
   }
 
