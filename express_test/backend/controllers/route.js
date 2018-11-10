@@ -13,6 +13,10 @@ module.exports = (app) => {
     res.render('examples/conference/index.ejs', {
       title: "- 1:1 화상수업"
     });
+  }).get('/many', (req, res) => {
+	  res.render('examples/many/index.html', {
+		  title : "- 1:다 화상수업"
+	  });
   })
 };
 
