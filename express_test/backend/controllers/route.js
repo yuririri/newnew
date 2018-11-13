@@ -11,11 +11,11 @@ module.exports = (app) => {
     });
   }).get('/conference', (req, res) => {
     res.render('examples/conference/index.ejs', {
-      title: "- 1:1 화상수업"
+      title: "- 일대일 화상수업"
     });
   }).get('/many', (req, res) => {
-	  res.render('examples/many/index.html', {
-		  title : "- 1:다 화상수업"
+	  res.render('examples/many/index.ejs', {
+		  title : "- 일대다 화상수업"
 	  });
   })
 };
